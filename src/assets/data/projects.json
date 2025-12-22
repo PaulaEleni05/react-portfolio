@@ -56,7 +56,37 @@
         ],
         "url": "YOUR_HOSTED_PORTFOLIO_URL",
         "github": "YOUR_GITHUB_REPO_URL",
-        "date": "2024",
+        "date": "2025",
         "tags": ["React", "Vite", "Tailwind CSS"]
+    },
+     {
+        "slug": "rest-medical-clinic",
+        "title": "Rest Medical Clinic",
+        "description": "This application provides a comprehensive platform for managing doctors, patients, appointments, prescriptions, and diagnoses.",
+        "screenshots": [
+            {
+                "url": "/screenshots/rest-medical-clinic.png",
+                "caption": "Rest Medical Clinic App"
+            }
+        ],
+        "url": "https://rest-medical-clinic.netlify.app/",
+        "github": "https://github.com/PaulaEleni05/rest-medical-clinc.git",
+        "date": "2025",
+        "tags": ["React", "JavaScript", "Tailwind CSS", "Shadcn UI"]
+    },
+    {
+        "slug": "ecotrail-website",
+        "title": "EcoTrail Website",
+        "description": "A responsive website created for my Web Design Frameworks module.",
+        "screenshots": [
+            {
+                "url": "/screenshots/EcoTrail.png",
+                "caption": "EcoTrail Website"
+            }
+        ],
+        "url": " https://paulaeleni05.github.io/EcoTrail-Website/",
+        "github": "https://github.com/PaulaEleni05/EcoTrail-Website.git",
+        "date": "2024",
+        "tags": ["CSS", "HTML", "Sass", "Bootstrap"]
     }
 ]
