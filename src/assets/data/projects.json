@@ -1,66 +1,62 @@
 [
     {
-        "slug": "todo-app",
-        "title": "Todo App",
-        "description": "A simple todo application to manage daily tasks.",
+        "slug": "rest-countries",
+        "title": "Rest Countries",
+        "description": "Countries explorer app with search, filtering, and detailed country information using REST Countries API.",
         "screenshots": [
             {
-                "url": "https://picsum.photos/seed/todoapp/600/400",
-                "caption": "Screenshot of Todo App"
+                "url": "/screenshots/rest-countries.png",
+                "caption": "Rest Countries App Interface"
             }
         ],
-        "url": "https://example.com/todo-app",
-        "github": "",
+        "url": "https://restcountries-explorer.netlify.app/",
+        "github": "https://github.com/PaulaEleni05/rest-countries-ca.git",
         "date": "2025",
-        "tags": ["React", "JavaScript", "CSS", "HTML"]
+        "tags": ["React", "REST API", "JavaScript", "CSS"]
     },
-
-        {
+    {
         "slug": "todo-app",
         "title": "Todo App",
-        "description": "A simple todo application to manage daily tasks.",
+        "description": "Task management app with add, edit, delete functionality and local storage.",
         "screenshots": [
             {
-                "url": "https://picsum.photos/seed/todoapp/600/400",
-                "caption": "Screenshot of Todo App"
+                "url": "/screenshots/todo app.png",
+                "caption": "Todo App"
             }
         ],
-        "url": "https://example.com/todo-app",
-        "github": "",
+        "url": "https://todo-app-paula.netlify.app/",
+        "github": "https://github.com/PaulaEleni05/Todo-App.git",
         "date": "2025",
-        "tags": ["React", "JavaScript", "CSS", "HTML"]
+        "tags": ["React", "JavaScript", "CSS"]
     },
-         {
-        "slug": "todo-app",
-        "title": "Todo App",
-        "description": "A simple todo application to manage daily tasks.",
+    {
+        "slug": "react-giph",
+        "title": "ReactGiph",
+        "description": "GIF search application powered by Giphy API with trending content and search.",
         "screenshots": [
             {
-                "url": "https://picsum.photos/seed/todoapp/600/400",
-                "caption": "Screenshot of Todo App"
+                "url": "/screenshots/reactgiph.png",
+                "caption": "ReactGiph App "
             }
         ],
-        "url": "https://example.com/todo-app",
-        "github": "",
+        "url": "https://reactgiph.netlify.app/",
+        "github": "https://github.com/PaulaEleni05/ReactGiph.git",
         "date": "2025",
-        "tags": ["React", "JavaScript", "CSS", "HTML"]
+        "tags": ["React", "Giphy API", "JavaScript"]
     },
-         {
-        "slug": "todo-app",
-        "title": "Todo App",
-        "description": "A simple todo application to manage daily tasks.",
+    {
+        "slug": "portfolio-website",
+        "title": "Portfolio Website",
+        "description": "Personal portfolio showcasing projects with dark mode and responsive design.",
         "screenshots": [
             {
-                "url": "https://picsum.photos/seed/todoapp/600/400",
-                "caption": "Screenshot of Todo App"
+                "url": "https://picsum.photos/seed/portfolio/600/400",
+                "caption": "Portfolio Website"
             }
         ],
-        "url": "https://example.com/todo-app",
-        "github": "",
-        "date": "2025",
-        "tags": ["React", "JavaScript", "CSS", "HTML"]
+        "url": "YOUR_HOSTED_PORTFOLIO_URL",
+        "github": "YOUR_GITHUB_REPO_URL",
+        "date": "2024",
+        "tags": ["React", "Vite", "Tailwind CSS"]
     }
-
-
-    
 ]

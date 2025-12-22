@@ -9,7 +9,17 @@ export default function Projects() {
   
   const ProjectCard = ({ project }) => (
     <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
-      <CardHeader className="pb-4">
+      {project.screenshots && project.screenshots.length > 0 && (
+        <div className="w-full h-48 overflow-hidden">
+          <img 
+            src={project.screenshots[0].url} 
+            alt={project.screenshots[0].caption}
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      )}
+      
+      <CardHeader className="pb-3">
         <div className="flex justify-between items-start mb-2">
           <CardTitle className="text-xl font-semibold">{project.title}</CardTitle>
           <span className="text-sm text-muted-foreground bg-secondary px-2 py-1 rounded">
@@ -21,17 +31,7 @@ export default function Projects() {
         </CardDescription>
       </CardHeader>
       
-      <CardContent className="pb-4">
-        {project.screenshots && project.screenshots.length > 0 && (
-          <div className="mb-4">
-            <img 
-              src={project.screenshots[0].url} 
-              alt={project.screenshots[0].caption}
-              className="w-full h-48 object-cover rounded-md"
-            />
-          </div>
-        )}
-        
+      <CardContent className="pb-4 pt-0">
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag, index) => (
             <span 
@@ -61,15 +61,6 @@ export default function Projects() {
         >
           View More
         </Button>
-        {project.github && (
-          <Button 
-            variant="outline" 
-            size="sm"
-            onClick={() => window.open(project.github, '_blank')}
-          >
-            GitHub
-          </Button>
-        )}
       </CardFooter>
     </Card>
   );
