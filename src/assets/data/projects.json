@@ -57,7 +57,7 @@
         "url": "YOUR_HOSTED_PORTFOLIO_URL",
         "github": "YOUR_GITHUB_REPO_URL",
         "date": "2025",
-        "tags": ["React", "Vite", "Tailwind CSS"]
+        "tags": ["React", "Vite", "Tailwind CSS", "Shadcn UI"]
     },
      {
         "slug": "rest-medical-clinic",

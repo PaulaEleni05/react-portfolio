@@ -8,35 +8,41 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
   
   const ProjectCard = ({ project }) => (
-    <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
+    <Card className="group overflow-hidden transition-all duration-500 hover:shadow-2xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-purple-100 dark:border-purple-900/30 hover:border-purple-400 dark:hover:border-purple-500 hover:-translate-y-2 relative">
+      {/* Purple Glow Effect on Hover */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+        <div className="absolute inset-0 bg-purple-500/10 dark:bg-purple-400/20 blur-xl"></div>
+      </div>
+      
       {project.screenshots && project.screenshots.length > 0 && (
-        <div className="w-full h-48 overflow-hidden">
+        <div className="w-full h-48 overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           <img 
             src={project.screenshots[0].url} 
             alt={project.screenshots[0].caption}
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
           />
         </div>
       )}
       
-      <CardHeader className="pb-3">
+      <CardHeader className="pb-3 relative z-10">
         <div className="flex justify-between items-start mb-2">
-          <CardTitle className="text-xl font-semibold">{project.title}</CardTitle>
-          <span className="text-sm text-muted-foreground bg-secondary px-2 py-1 rounded">
+          <CardTitle className="text-xl font-semibold group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">{project.title}</CardTitle>
+          <span className="text-xs text-muted-foreground bg-purple-100 dark:bg-purple-900/50 px-3 py-1 rounded-full font-medium">
             {project.date}
           </span>
         </div>
-        <CardDescription className="text-base leading-relaxed">
+        <CardDescription className="text-sm leading-relaxed">
           {project.description}
         </CardDescription>
       </CardHeader>
       
-      <CardContent className="pb-4 pt-0">
+      <CardContent className="pb-4 pt-0 relative z-10">
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag, index) => (
             <span 
               key={index}
-              className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-full"
+              className="px-3 py-1 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-xs rounded-full font-medium border border-purple-200 dark:border-purple-800 group-hover:bg-purple-100 dark:group-hover:bg-purple-900/50 transition-colors duration-300"
             >
               {tag}
             </span>
@@ -44,12 +50,13 @@ export default function Projects() {
         </div>
       </CardContent>
       
-      <CardFooter className="pt-0 gap-2">
+      <CardFooter className="pt-0 gap-2 relative z-10">
         {project.url && (
           <Button 
             variant="default" 
             size="sm"
             onClick={() => window.open(project.url, '_blank')}
+            className="bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-600 text-white shadow-md hover:shadow-purple-500/50 transition-all duration-300"
           >
             View Live
           </Button>
@@ -58,6 +65,7 @@ export default function Projects() {
           variant="secondary" 
           size="sm"
           onClick={() => setSelectedProject(project)}
+          className="border-purple-200 dark:border-purple-800 hover:border-purple-400 dark:hover:border-purple-600 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-all duration-300"
         >
           View More
         </Button>
@@ -69,9 +77,12 @@ export default function Projects() {
     <section id="projects" className="py-20 sm:py-32">
       <div className="space-y-12 sm:space-y-16">
         <div className="space-y-6 sm:space-y-8">
-          <h2 className="text-3xl sm:text-4xl font-light">Projects</h2>
+          <div className="space-y-4">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 dark:from-purple-400 dark:via-pink-400 dark:to-purple-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-x">Projects</h2>
+            <div className="h-1 w-24 bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-400 dark:to-pink-400 rounded-full"></div>
+          </div>
           <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-            Projects I have worked on.
+            Explore my featured work and personal projects.
           </p>
         </div>
 
