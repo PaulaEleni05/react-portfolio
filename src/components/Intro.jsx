@@ -48,7 +48,7 @@ export default function Intro(){
               <div className="space-y-4 animate-fade-in-delay">
                 <div className="text-sm text-purple-600 dark:text-purple-400 font-mono font-semibold">FOCUS</div>
                 <div className="flex flex-wrap gap-2">
-                  {['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS'].map((skill) => (
+                  {['HTML', 'CSS','Figma', 'JavaScript', 'React', 'Tailwind CSS'].map((skill) => (
                     <span
                       key={skill}
                       className="px-3 py-1 text-xs border-2 border-purple-200 dark:border-purple-800 rounded-full hover:border-purple-500 dark:hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/30 hover:text-purple-700 dark:hover:text-purple-300 transition-all duration-300 hover:scale-105 hover:shadow-md hover:shadow-purple-500/20"

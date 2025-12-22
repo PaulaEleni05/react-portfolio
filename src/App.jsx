@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import StarryBackground from './components/StarryBackground';
+import CustomCursor from './components/CustomCursor';
 
 // pages
 // import Home from './pages/Home';
@@ -56,6 +57,7 @@ export default function App() {
   return (
     <div className="min-h-screen text-foreground relative">
       <StarryBackground />
+      <CustomCursor />
       <Navbar activeSection={activeSection} />
       <main className='max-w-4xl mx-auto px-6 sm:px-8 lg:px-16 relative z-10'>
         <Intro />

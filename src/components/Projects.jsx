@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import projectsJSON from '@/assets/data/projects.json';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -6,6 +6,28 @@ import { Button } from '@/components/ui/button';
 export default function Projects() {
   const [projects] = useState(projectsJSON);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [visibleProjects, setVisibleProjects] = useState(new Set());
+  const projectRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = projectRefs.current.indexOf(entry.target);
+            setVisibleProjects((prev) => new Set([...prev, index]));
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    projectRefs.current.forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, [projects]);
   
   const ProjectCard = ({ project }) => (
     <Card className="group overflow-hidden transition-all duration-500 hover:shadow-2xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-purple-100 dark:border-purple-900/30 hover:border-purple-400 dark:hover:border-purple-500 hover:-translate-y-2 relative">
@@ -87,8 +109,21 @@ export default function Projects() {
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+          {projects.map((project, index) => (
+            <div
+              key={project.slug}
+              ref={(el) => (projectRefs.current[index] = el)}
+              className={`transition-all duration-700 ${
+                visibleProjects.has(index)
+                  ? 'opacity-100 translate-y-0 rotate-0'
+                  : 'opacity-0 translate-y-8 -rotate-3'
+              }`}
+              style={{
+                transitionDelay: `${index * 100}ms`
+              }}
+            >
+              <ProjectCard project={project} />
+            </div>
           ))}
         </div>
       </div>
