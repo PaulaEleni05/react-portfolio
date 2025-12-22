@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my web development projects.
 
 ##  Live Portfolio
 
-**[View Live Site](#)** *(Add your deployed URL here)*
+**[https://paula-eleni-popovici-portfolio.netlify.app/](#)** 
 
 ## Featured Projects
 
@@ -27,6 +27,7 @@ A modern, responsive portfolio website showcasing my web development projects.
 - 💜 Purple starry background with animations
 - ✨ Custom cursor sparkle effect
 - 📱 Fully responsive design
+- 👨‍🚀 Floating astronaut, my personal digital hand-drawn character I drew in IbisPaint X App
 - 🎨 Modern UI with smooth transitions
 
 ##  Getting Started

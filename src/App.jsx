@@ -7,6 +7,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import StarryBackground from './components/StarryBackground';
 import CustomCursor from './components/CustomCursor';
+import FloatingAstronaut from './components/FloatingAstronaut';
 
 // pages
 // import Home from './pages/Home';
@@ -58,6 +59,7 @@ export default function App() {
     <div className="min-h-screen text-foreground relative">
       <StarryBackground />
       <CustomCursor />
+      <FloatingAstronaut />
       <Navbar activeSection={activeSection} />
       <main className='max-w-4xl mx-auto px-6 sm:px-8 lg:px-16 relative z-10'>
         <Intro />
