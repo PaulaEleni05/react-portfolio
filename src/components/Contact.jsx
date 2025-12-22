@@ -26,10 +26,10 @@ export default function Contact() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { name: 'GitHub', handle: '@mohammedche', url: '#' },
-                  { name: 'IADT', handle: '@mohammedche', url: '#' },
-                  { name: 'HubSpot Community', handle: '@mohammedche', url: '#' },
-                  { name: 'LinkedIn', handle: 'mohammedche', url: '#' },
+                  { name: 'GitHub', handle: '@PaulaEleni05', url: '#' },
+                  { name: 'IADT', handle: '@PaulaEleni', url: '#' },
+                  { name: 'HubSpot Community', handle: '@PaulaEleni', url: '#' },
+                  { name: 'LinkedIn', handle: 'PaulaEleniPopovici', url: '#' },
                 ].map((social) => (
                   <a
                     key={social.name}

@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Routes, Route  } from 'react-router'
-import { useEffect, useState} from 'react';
-
+import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
-
 import Intro from './components/Intro';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
@@ -16,36 +14,55 @@ import Footer from './components/Footer';
 // import ProjectIndex from '@/pages/projects/Index';
 
 export default function App() {
-  const [activeSection, setActiveSection ] = useState('');
+
+  const [activeSection, setActiveSection] = useState('');
+  const [isDark, setIsDark] = useState(localStorage.getItem('dark') === 'true');
 
   useEffect(() => {
-    const sections = [ 'intro', 'projects', 'contact'];
+    console.log("Dark Mode:", isDark);
+
+    document.documentElement.classList.toggle('dark', isDark);
+
+    localStorage.setItem('dark', isDark);
+
+  }, [isDark]);
+
+  useEffect(() => {
+    const sections = ['intro', 'projects', 'contact'];
     const targets = sections.map(section => document.getElementById(section));
 
-    const observer = new IntersectionObserver( (entries) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting){
-        console.log(entry.target.id)
-        setActiveSection(entry.target.id);
-      }
+        if(entry.isIntersecting){
+          entry.target.classList.add('animate-fade-in-up');
+          console.log(entry.target.id);
+          setActiveSection(entry.target.id);
+        }
+        else {
+          entry.target.classList.remove('animate-fade-in-up');
+        }
       });
-    }, { threshold: 0.3, rootMargin:'0px 0px 0px 0px'});
+    }, { threshold: 0.3, rootMargin: '0px 0px 0px 0px' });
 
     targets.forEach(el => observer.observe(el))
+
     return () => observer.disconnect()
 
-    // console.log(targets);
   }, []);
+
+  const toggleTheme = () => setIsDark(currentMode => !currentMode);
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">
-      <Navbar activeSection={activeSection}/>
+      <Navbar activeSection={activeSection} />
       <main className='max-w-4xl mx-auto px-6 sm:px-8 lg:px-16'>
         <Intro />
         <Projects />
         <Contact />
-        <Footer />
+        <Footer toggleTheme={toggleTheme} isDark={isDark} />
       </main>
+
+      <div className='fixed bottom-0 left-0 h-24 w-full bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none'></div>
     </div>
     // <Router>
     //   <Navbar />
