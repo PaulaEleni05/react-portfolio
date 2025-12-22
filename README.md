@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my web development projects.
 
 ##  Live Portfolio
 
-**[https://paula-eleni-popovici-portfolio.netlify.app/](#)** 
+https://paula-eleni-popovici-portfolio.netlify.app/
 
 ## Featured Projects
 
