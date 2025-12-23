@@ -12,7 +12,7 @@
         "url": "https://restcountries-explorer.netlify.app/",
         "github": "https://github.com/PaulaEleni05/rest-countries-ca.git",
         "date": "2025",
-        "tags": ["React", "REST API", "JavaScript", "CSS"]
+        "tags": ["React", "REST API", "JavaScript", "CSS", "DaisyUI"]
     },
     {
         "slug": "todo-app",
