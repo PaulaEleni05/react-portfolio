@@ -2,7 +2,7 @@
     {
         "slug": "rest-countries",
         "title": "Rest Countries",
-        "description": "Countries explorer app with search, filtering, and detailed country information using REST Countries API.",
+        "description": "Countries explorer app with search and detailed country information using REST Countries API.",
         "screenshots": [
             {
                 "url": "/screenshots/rest-countries.png",
@@ -17,7 +17,7 @@
     {
         "slug": "todo-app",
         "title": "Todo App",
-        "description": "Task management app with add, edit, delete functionality and local storage.",
+        "description": "Task management app with add, delete functionality and local storage.",
         "screenshots": [
             {
                 "url": "/screenshots/todo app.png",

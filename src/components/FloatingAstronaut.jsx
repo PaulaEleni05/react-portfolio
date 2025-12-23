@@ -11,8 +11,8 @@ export default function FloatingAstronaut() {
         const newY = prev.y + velocity.y;
 
         // Bounce off edges
-        const maxX = window.innerWidth - 175; 
-        const maxY = window.innerHeight - 175;
+        const maxX = window.innerWidth - 170; 
+        const maxY = window.innerHeight - 170;
 
         let newVelX = velocity.x;
         let newVelY = velocity.y;
